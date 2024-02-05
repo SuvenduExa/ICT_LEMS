@@ -17,6 +17,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import PageObjects.Login;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class Steps extends BaseClass
@@ -120,7 +121,7 @@ public class Steps extends BaseClass
 	public void click_on_the_login() {
 		ln.click_on_the_login();
 
-		if(driver.getTitle().equals("Aldar"))
+		if(driver.getTitle().equals(" RealCube Cloud for Real Estate "))
 		{
 			Assert.assertTrue(true); 
 			System.out.println("Login Successful");
@@ -132,7 +133,11 @@ public class Steps extends BaseClass
 		}	   
 	}
 	
-	
+	@When("close browser")
+	public void close_browser() {
+		logger.info("************* Closing Browswer*******************");
+		driver.quit();
+	}
 	
 	
 }

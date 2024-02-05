@@ -23,7 +23,7 @@ public class Login
 
 
 	public void user_enters_the_email_as_and_password_as(String string, String string2) {
-	    driver.findElement(By.name("username")).sendKeys(string);
+	    driver.findElement(By.name("email")).sendKeys(string);
 	    driver.findElement(By.name("password")).sendKeys(string2);
 
 	    
@@ -32,7 +32,7 @@ public class Login
 
 	public void click_on_the_login() {
 		
-		driver.findElement(By.xpath("//button[text()=' Login']")).click();
+		driver.findElement(By.xpath("//button[text()='Sign In']")).click();
 	}
 
 }
